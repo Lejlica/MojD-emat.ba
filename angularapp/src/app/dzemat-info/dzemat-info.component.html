@@ -1,0 +1,41 @@
+
+<main *ngFor="let x of dzematPodaci">
+  <div class="rectangle">
+    <p class="naslov" >{{x.naziv}}</p><p class="opisDzemata">{{x.kratkiOpis}}</p>
+  </div>
+  <div class="img">
+    <img src="{{getSlika()}}" class="img-fluid" alt="Responsive image">
+  </div>
+
+  <div class="article">
+    <h2>O džematu</h2>
+    <p>{{x.informacije}}</p>
+  </div>
+
+  <div class="imam">
+    <img class="imamSlika" src="{{getSlikaImama()}}"   alt="Responsive image">
+    <h2 class="naziv"> Imam </h2>
+    <p class="opis" *ngFor="let x of imamPodaci">{{x.biografija}}</p>
+  </div>
+
+
+  <div class="džematskiodbor">
+    <h2>Džematski odbor</h2>
+    <p>{{x.dzematskiOdbor}}</p>
+  </div>
+
+  <footer id="f" class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      </a>
+      <span class="text-muted">&copy; 2023 Moster, Inc</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+    </ul>
+  </footer>
+</main>

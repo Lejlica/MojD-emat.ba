@@ -1,0 +1,58 @@
+
+
+
+
+<div class="main-container">
+  <section class="naslov">
+    <div class="containerNaslov">
+      <div class="red">
+        <div class="text_center">
+          <h1 class="uppercase mb0" style="color: rgba(10,16,9,0.74)">VIJESTI U DŽEMATU</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--<button style="background-color:darkgray" type="button" class="btn  btn-lg btn-block " (click)="BtnDodajVijest()">Dodaj novu vijest</button>-->
+
+  <td *ngFor="let s of getPodaci()" >
+
+    <section class="vijest">
+      <div class="glavni">
+        <div class="container">
+          <div class="children">
+
+            <div class="slika">
+              <img style="  border-radius: 10px;"  src="{{getSlika(s)}}" class="img-fluid " >
+            </div>
+            <div class="tekst">
+              <h1>{{s.naslov}}</h1><br>
+              <h5> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-calendar" viewBox="0 0 25 20">
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+              </svg>{{s.datum|date:'MM/dd/yyyy'}}</h5><br>
+              <p>{{s.opis}}</p><br>
+
+              <button type="button" class="btn btn-secondary" (click)="BtnProcitajViseOVijest(s)">VIŠE</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </td>
+</div>
+
+
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" style="cursor: pointer" (click)="goToPrev()">Prethodna</a></li>
+    <li *ngFor="let p of pageNumbersArray()" class="page-item" [ngClass]="p==currentPage?'active':''" (click)="goToPage(p)"><Button class="page-link">{{p}}</Button> </li>
+    <li class="page-item"><a class="page-link" style="cursor: pointer" (click)="goToNext()">Sljedeća</a></li>
+  </ul>
+
+</nav>
+
+
+
+
+

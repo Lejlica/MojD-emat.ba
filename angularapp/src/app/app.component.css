@@ -1,0 +1,34 @@
+.profilna-slika{
+  width: 30px;
+}
+
+.nav-link{
+  color: black!important;
+  font-size: 16px;
+  margin-left: 35px;
+}
+.nav-link:hover{
+  color: #209B60 !important;
+}
+.navbar-brand{
+  color: #209B60!important;
+  font-size: 25px;
+}
+#Opine{
+  /*color: #209B60!important;*/
+  font-size: 20px;
+  padding-top: 4px;
+}
+.container-fluid{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.container{
+  width: 100%;
+  bottom: 0px;
+  position: absolute;
+  left: 6%;
+  margin-left: auto;
+}
+
+

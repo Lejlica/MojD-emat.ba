@@ -1,0 +1,93 @@
+.main-containerr{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.text_centerr{
+  background-color: rgba(231, 225, 221, 0.6);
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin: auto;
+}
+.uppercase{
+  text-align: center;
+}
+
+.dugme{
+  position: center;
+
+  margin-top:5%;
+  margin-bottom: 0px;
+
+
+  display: inline;
+  margin-bottom: 0%;
+
+
+  margin-top: 1%;
+  font-size: 20px;
+}
+
+
+form{
+  width: 30%;
+}
+.tabelaa{
+
+
+  width: 90%;
+  position: center;
+  margin-left: 6%;
+  margin-right: 20%;
+  box-shadow: 5px 10px 20px;
+  margin-top: 1%;
+
+  font-size: 20px;
+  background-color: #e4ecea;
+}
+button{
+  border-radius: 0px;
+
+
+}
+
+#myInput,#myInputt {
+
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 20px;
+}
+
+.inp{
+  display: inline;
+  margin-bottom: 0%;
+  width: 80%;
+  position: center;
+  margin-left:6%;
+  margin-right: 20%;
+  margin-top: 1%;
+  font-size: 20px;
+}
+.zz{
+  margin-top: 3%;
+
+}
+.zzz{
+  margin-top: 3%;
+}
+.muftijstvaa{
+  position: relative;
+
+}
+
+.medzlisii{
+  position: relative;
+
+}

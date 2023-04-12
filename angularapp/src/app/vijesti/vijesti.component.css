@@ -1,0 +1,151 @@
+*{box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+}
+section, footer {
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+}
+.slika{
+  width: 50%;
+  float:left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  margin-bottom: 2%;
+
+}
+img{
+  max-width: 100%;
+  padding-bottom: 10%;
+  padding-top: 10%;
+  max-height: 100%;
+  border-radius: 10px;
+  margin-left: 10%;
+}
+
+
+.tekst{
+  position: absolute;
+  min-height: 1px;
+  padding-left: 55%;
+  display: inline-block;
+  padding-right: 4%;
+
+  padding-top:5%;
+  height: 100%;
+  width:100%;
+}
+p{
+  width: 100%;
+}
+div{
+  display:block;
+
+
+}
+.uppercase{
+  text-align: center;
+}
+.container{
+
+  width: 100%;
+
+
+  position: absolute;
+  height: 100%;
+}
+
+.main-container{
+  clear: both;
+  box-sizing: border-box;
+  height: 40%;
+
+}
+.main-container{
+  display: grid;
+  position: center;
+
+}
+
+
+
+.naslov{
+  background-color: rgba(236, 233, 228, 0.6);
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin: auto;
+  width: 100%;
+  box-shadow: inset 0 0 20px #a19d9d;
+
+}
+.vijest
+{
+  height: 100%;
+  background-color: white;
+  margin:auto;
+
+  clear: left;
+  height: 100%;
+}
+h3{
+  text-align: center;
+  letter-spacing: 6px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  color: #292929;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  line-height: normal;
+
+  vertical-align: middle;
+
+}
+ul{list-style: none;
+  padding: 0}
+li{
+  display: list-item;}
+.btn-secondary{
+  margin-right: 10px;
+  width: 40%;
+  height: 45px;
+
+  background-color: #1d916f;
+
+}
+
+section.vijest{
+  width: 100%;
+  padding-bottom: 0px;
+  height: 100%;
+  padding-bottom: 1%;
+}
+.pagination{
+  margin-left: 40%;
+  padding-top: 5%;
+}
+.glavni{
+  background-color: rgba(0, 0, 0, 0.03);
+  height: 100%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 0px;
+  padding-bottom: 25%;
+  box-shadow: 1px 5px 20px;
+  position: relative;
+  border-radius: 20px;
+}
+

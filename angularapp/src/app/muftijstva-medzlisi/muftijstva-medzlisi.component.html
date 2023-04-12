@@ -1,0 +1,202 @@
+<div class="main-containerr">
+  <section class="naslovv">
+    <div class="containerNaslovv">
+      <div class="redd">
+        <div class="text_centerr">
+          <b><h1 class="uppercase mb0" style="color: #14686e">Muftijstva i medžlisi</h1></b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+
+
+<div class="muftijstvaa">
+  <div class="zzz">
+
+
+
+    <div class="inp">
+      <input style="width: 30%;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Pretraži muftijstva" title="Type in a name" [(ngModel)]="nazivMuftijstva">    <button style="margin-left: 0px" type="button" class="btn btn-outline-none" (click)="DodajMuftijstvo()"><img style="margin-left: 0px" src="   https://cdn-icons-png.flaticon.com/512/3143/3143540.png " width="60" height="60" alt="" title="" class="img-small"></button>
+    </div>
+
+  </div>
+  <div class="tabelaa">
+    <table class="table table-striped">
+      <tr>
+
+        <th style="width: 500px;padding-left: 40px">Naziv muftijstva</th>
+        <th>Adresa</th>
+        <th>Informacije</th>
+        <th>Fax</th>
+        <th>Telefon</th>
+        <th>Kontakt</th>
+
+      </tr>
+      <tbody>
+      <tr *ngFor="let s of getMuft()">
+
+        <td style=" padding-left: 40px">{{s.naziv}}</td>
+        <td style="width: 200px">{{s.adresa}}</td>
+        <td style="width: 2000px">{{s.informacije}}</td>
+        <td style="width: 2000px">{{s.fax}}</td>
+        <td style="width: 1700px">{{s.telefon}}</td>
+        <td style="width: 200px;padding-right: 40px">{{s.kontaktOsoba}}</td>
+
+        <td style="width: 5px;">
+          <button class="btn btn-outline-none" (click)="UrediMuftijstvo(s)"><img src="   https://cdn-icons-png.flaticon.com/512/738/738880.png " width="30" height="30" alt="" title="" class="img-small"></button>
+        </td>
+        <td style="width: 5px;">
+          <button type="button1" class="btn btn-outline-none" (click)="ObrisiMuftijstvo(s)"><img  src="   https://cdn-icons-png.flaticon.com/512/9221/9221441.png " width="30" height="30" alt="" title="" class="img-small"></button>
+        </td>
+
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="medzlisii">
+  <div class="zz">
+    <div class="inp">
+      <input style="width: 30%;clear: left" type="text" id="myInputt" onkeyup="myFunction()" placeholder="Pretraži medžlise" title="Type in a name" [(ngModel)]="nazivMedzlisa"> <button type="button" class="btn btn-outline-none" (click)="DodajMedzlis()"><img style="margin-left: 0px" src="   https://cdn-icons-png.flaticon.com/512/3143/3143540.png " width="60" height="60" alt="" title="" class="img-small"></button>
+    </div>
+
+
+  </div>
+
+  <div class="tabelaa">
+    <table class="table table-striped">
+      <tr>
+
+        <th style="width: 400px; padding-left: 40px">Naziv medžlisa</th>
+        <th>Adresa</th>
+        <th>Informacije</th>
+        <th>Fax</th>
+        <th>Telefon</th>
+        <th>Muftijstvo</th>
+
+      </tr>
+      <tbody>
+      <tr *ngFor="let s of getMedz()">
+
+        <td style="width: 200px;padding-left: 40px">{{s.naziv}}</td>
+        <td style="width: 200px">{{s.adresa}}</td>
+        <td style="width: 2000px">{{s.informacije}}</td>
+        <td style="width: 500px">{{s.fax}}</td>
+        <td style="width: 400px">{{s.telefon}}</td>
+        <td style="width: 200px">{{s.muftijstvo}}</td>
+
+        <td style="width: 5px;">
+          <button type="button1"  class="btn btn-outline-none" (click)="UrediMedzlis(s)"><img src="   https://cdn-icons-png.flaticon.com/512/738/738880.png " width="30" height="30" alt="" title="" class="img-small"></button>
+        </td>
+        <td style="width: 5px;">
+          <button class="btn btn-light"  class="btn btn-outline-none" (click)="ObrisiMedzlis(s)"><img  src="   https://cdn-icons-png.flaticon.com/512/9221/9221441.png " width="30" height="30" alt="" title="" class="img-small"></button>
+
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div *ngIf="novo_muftijstvo!=null" class="modal fade show" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" aria-modal="true" role="dialog" style="display: block;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLiveLabel">{{this.novo_muftijstvo.id==0?"Dodaj muftijstvo":"Uredi muftijstvo"}} </h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="novo_muftijstvo=null"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label class="form-label">Naziv</label>
+          <input class="form-control" placeholder="Naziv" [(ngModel)]="novo_muftijstvo.naziv">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Telefon</label>
+          <input class="form-control" placeholder="Telefon" [(ngModel)]="novo_muftijstvo.telefon"/>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Adresa</label>
+          <input class="form-control"  placeholder="Adresa" [(ngModel)]="novo_muftijstvo.adresa"/>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Fax</label>
+          <input class="form-control"  placeholder="Fax" [(ngModel)]="novo_muftijstvo.fax"/>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Informacije</label>
+          <input class="form-control"  placeholder="Informacije" [(ngModel)]="novo_muftijstvo.informacije"/>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Kontakt osoba</label>
+          <input class="form-control"  placeholder="Kontakt osoba" [(ngModel)]="novo_muftijstvo.kontaktOsoba"/>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="novo_muftijstvo=null">Zatvori</button>
+        <button type="button" class="btn btn-primary" (click)="snimi()" >Spasi</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="novi_medzlis!=null" class="modal fade show" id="exampleModalLive1" tabindex="-1" aria-labelledby="exampleModalLiveLabel" aria-modal="true" role="dialog" style="display: block;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLiveLabel1">{{this.novi_medzlis.id==0?"Dodaj medžlis":"Uredi medžlis"}} </h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="novi_medzlis=null"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label class="form-label">Naziv</label>
+          <input class="form-control" placeholder="Naziv" [(ngModel)]="novi_medzlis.naziv">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Telefon</label>
+          <input class="form-control" placeholder="Telefon" [(ngModel)]="novi_medzlis.telefon"/>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Adresa</label>
+          <input class="form-control"  placeholder="Adresa" [(ngModel)]="novi_medzlis.adresa"/>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Fax</label>
+          <input class="form-control"  placeholder="Fax" [(ngModel)]="novi_medzlis.fax"/>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Informacije</label>
+          <input class="form-control"  placeholder="Informacije" [(ngModel)]="novi_medzlis.informacije"/>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Muftijstvo</label>
+          <select class="form-control" [(ngModel)]="novi_medzlis.muftijstvoId">
+            <option *ngFor="let m of muftijstva" value="{{m.id}}">{{m.naziv}}</option>
+          </select>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="novi_medzlis=null">Zatvori</button>
+        <button type="button" class="btn btn-primary" (click)="snimiMedzlis()" >Spasi</button>
+      </div>
+    </div>
+  </div>
+</div>
+

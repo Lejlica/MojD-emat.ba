@@ -1,0 +1,28 @@
+.card {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  border:none;
+}
+.image-grid-container {
+  display: grid;
+
+  /* For 3 columns */
+  grid-template-columns: auto ;
+
+}
+img {
+  width: 100%;
+
+  border-radius: 20px;
+}
+.btn btn-primary
+{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.container{
+  margin-top: 4%;
+}

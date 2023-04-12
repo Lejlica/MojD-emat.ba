@@ -1,0 +1,81 @@
+*{
+  box-sizing: border-box;
+}
+.naslov{
+  text-align: center;
+  top: 40px;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 20px;
+  color: #6B54CA;
+  margin-bottom: 5%;
+}
+.rectangle{
+  height: 110px;
+  background: #eaeaea;
+}
+
+main{
+  height: 400%;
+}
+.form-group0{
+  position: relative;
+  width: 55%;
+  align-items: center;
+  left: 20%;
+  font-size: 20px;
+  top: 35%;
+  margin-bottom: 3%;
+  margin-top: 5%;
+}
+.form-group1{
+  position: relative;
+  width: 55%;
+  align-items: center;
+  top: 50%;
+  left: 20%;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+.form-group2{
+  position: relative;
+  width: 55%;
+  align-items: center;
+  top: 70%;
+  left: 20%;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+
+.form-group6{
+  position: relative;
+  width: 20%;
+  align-items: center;
+  top: 170%;
+  left: 67%;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+button{
+  background-color: #9183d2;
+  width: 100px;
+  border: 2px solid #333333;
+  border-radius: 8px;
+}
+button:hover{
+  background-color: #6a53c9;
+}
+.form-control{
+  background-color: #F7F7F7;
+  border: 2px solid #333333;
+  border-radius: 8px;
+}
+#exampleFormControlTextarea2{
+  height: 300px;
+}
+#exampleFormControlTextarea0{
+  height: 50px;
+}

@@ -1,0 +1,102 @@
+<div class="rectangle">
+  <p class="naslov">MATIČNA KNJIGA</p>
+</div>
+<div class="filterDiv">
+  <input style="padding-left: 33px" class="filterImePrezime" placeholder="Ime ili prezime..." [(ngModel)]="filterPrezime">
+
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+      Filter
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <li>Član harema</li>
+      <li><input class="dropdown-item" type="checkbox" id="f1"></li>
+      <li>Član IZ:</li>
+      <li><input class="dropdown-item" type="checkbox" id="f2"></li>
+      <li><button class="dropdown-item" id="btnFiltriraj" type="button" (click)="getpodaci()">Filtriraj</button></li>
+    </ul>
+  </div>
+
+  <button class="popis" (click)="otvoriPopis()">Lista stanovnika</button>
+  <button class="dodajPorodicu" (click)="novaPorodica()">Dodaj porodicu</button>
+</div>
+
+<div class="tabelap">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Prezime</th>
+      <th>Ime nosioca</th>
+      <th>Lokacija</th>
+      <th>Telefon</th>
+      <th>Clanovi harema</th>
+      <th>Clanovi IZ</th>
+      <th>Detalji</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let x of getpodaci()">
+      <td>{{x.prezime}}</td>
+      <td>{{x.nosiocPorodice}}</td>
+      <td>{{x.lokacija}}</td>
+      <td>{{x.telefon}}</td>
+      <td><input type="checkbox" name="name1" *ngIf="x.clanoviHarema==true" checked /></td>
+      <td><input type="checkbox" name="name1" *ngIf="x.clanoviIZ==true" checked /></td>
+      <td><button type="button" class="btn btn-secondary" (click)="otvoriClanove(x)">...</button></td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<div *ngIf="odabranaPorodica!=null" class="modal fade show" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" aria-modal="true" role="dialog" style="display: block;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLiveLabel">Nova porodica</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="odabranaPorodica=null"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label class="form-label">Prezime</label>
+          <input class="form-control" placeholder="Prezime" [(ngModel)]="odabranaPorodica.prezime">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ime nosioca</label>
+          <input class="form-control" placeholder="Ime nosioca" [(ngModel)]="odabranaPorodica.nosiocPorodice"/>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Lokacija</label>
+          <input class="form-control" placeholder="Lokacija" [(ngModel)]="odabranaPorodica.lokacija">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Telefon</label>
+          <input class="form-control" placeholder="Telefon" [(ngModel)]="odabranaPorodica.brojTelefona"/>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Adresa</label>
+          <input class="form-control" placeholder="Adresa" [(ngModel)]="odabranaPorodica.adresa">
+        </div>
+        <div style="display: none" class="mb-3" >
+          <label class="form-label">Dzemat ID</label>
+          <input class="form-control" placeholder="Ime" [(ngModel)]="odabranaPorodica.dzematId" disabled>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+          <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" (click)="odabranaPorodica.clanoviIZ=true">
+          <label class="btn btn-outline-primary" for="btncheck1">Clanovi IZ</label>  </div>
+
+        <div style="margin-left: 20px" class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+          <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" (click)="odabranaPorodica.clanoviHarema=true">
+          <label class="btn btn-outline-primary" for="btncheck2">Clanovi harema</label>  </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="odabranaPorodica=null">Zatvori</button>
+        <button type="button" class="btn btn-primary" (click)="snimiPorodicu()"  >Spasi</button>
+      </div>
+    </div>
+  </div>
+</div>

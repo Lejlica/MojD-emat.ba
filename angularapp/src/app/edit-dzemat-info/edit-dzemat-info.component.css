@@ -1,0 +1,106 @@
+*{
+  box-sizing: border-box;
+}
+.naslov{
+  text-align: center;
+  top: 40px;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 20px;
+  color: #F46E62;
+}
+.podnaslov{
+  text-align: center;
+  top: 70px;
+  position: relative;
+  color: #F46E62;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 20px;
+}
+.rectangle{
+  height: 180px;
+  background: #eaeaea;
+  margin-bottom: 5%;
+}
+main{
+  height: 400%;
+}
+
+.form-group0{
+  position: relative;
+  width: 55%;
+  align-items: center;
+  left: 20%;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+.form-group1{
+  position: relative;
+  width: 55%;
+  align-items: center;
+  top: 5%;
+  left: 20%;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+.form-group2{
+  position: relative;
+  width: 55%;
+  align-items: center;
+  top: 10%;
+  left: 20%;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+.form-group3{
+  position: relative;
+  width: 55%;
+  align-items: center;
+  top: 15%;
+  left: 20%;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+.form-group4{
+  position: relative;
+  width: 55%;
+  align-items: center;
+  top: 20%;
+  left: 20%;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+.form-group5{
+  position: relative;
+  width: 55%;
+  align-items: center;
+  top: 20%;
+  left: 69%;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+button{
+  background-color: #F46E62;
+  width: 100px;
+  border: 2px solid #333333;
+  border-radius: 8px;
+}
+button:hover{
+  background-color: #f33829;
+}
+.form-control{
+  background-color: #F7F7F7;
+  border: 2px solid #333333;
+  border-radius: 8px;
+}
+#exampleFormControlTextarea2{
+  height: 300px;
+}
+#exampleFormControlTextarea0{
+  height: 50px;
+}

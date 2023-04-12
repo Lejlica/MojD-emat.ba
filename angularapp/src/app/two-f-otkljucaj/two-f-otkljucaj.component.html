@@ -1,0 +1,30 @@
+
+<form action="action_page.php" method="post">
+
+  <div class="imgcontainerr">
+    <h1>Potvrdite da ste to vi</h1>
+    <h6 style="font-size: 30px; width: 80%;margin-top: 2%">Poslali smo verifikacijski kod na e-mail koji je naveden u vašem korisničkom nalogu</h6>
+  </div>
+
+  <div class="containerr">
+<div class="mod" style="text-align: center">
+    <label style="margin-top: 3%">Verifikacijski kod</label>
+    <br>
+    <input style="border: 3px solid dodgerblue;border-style: outset; " id="txtKorisnickoIme" [(ngModel)]="code" type="text"  name="unameg" required>
+    <br><br>
+    <button type="submit" (click)="otkljucaj()">Potvrdite i prijavite se</button>
+</div>
+    <br><br>
+    <p style="font-size: 17px; text-align: center; color: gray;margin-bottom: 5%">Pričekajte 15 sekundi prije slanja zahtjeva za novim kodom</p>
+
+    <hr style="width: 100%">
+
+    <p style="font-size: 20px;text-align: center;  margin-top: 4%; margin-bottom: 4%">Kreiranjem računa pristajete na naše<a style="font-size: 20px" href="#">Uslove & Privatnost</a>.</p>
+
+    <hr style="width: 100%">
+
+    <p style="font-size: 20px;text-align: center; margin-top: 4%;">Copyright &copy; 2022-2023, MojDzemat.ba. Sva prava pridržana.</p>
+  </div>
+
+
+</form>

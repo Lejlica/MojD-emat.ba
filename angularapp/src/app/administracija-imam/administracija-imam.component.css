@@ -1,0 +1,53 @@
+*{
+  box-sizing: border-box;
+}
+main{
+  height: 1500px;
+}
+.naslov{
+  text-align: center;
+  top: 40px;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 20px;
+  color: #258a89;
+}
+.rectangle{
+  height: 100px;
+  background: #F7F7F7;
+}
+.btn{
+  position: relative;
+  margin: 30px;
+  width: 40%;
+  height: 250px;
+  left: 7%;
+  font-size: xx-large;
+}
+#btn-vijesti{
+  background-color:#937DC2 ;
+}
+#btn-vijesti:hover{
+  background-color: rgba(147, 125, 194, 0.76);
+}
+#btn-aktivnosti{
+  background-color:#C689C6 ;
+}
+#btn-aktivnosti:hover{
+  background-color: #c77cc7;
+}
+#btn-ljetopis{
+  background-color: #E8A0BF;
+}
+#btn-ljetopis:hover{
+  background-color: rgba(232, 160, 191, 0.78);
+}
+#btn-dzematInfi{
+  background-color: #FCC5C0;
+}
+#btn-dzematInfi:hover{
+  background-color: rgba(252, 197, 192, 0.71);
+}

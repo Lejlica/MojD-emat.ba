@@ -1,0 +1,41 @@
+<form>
+  <div class="containerr">
+    <h3><img src="   https://cdn-icons-png.flaticon.com/512/3341/3341505.png " width="50" height="50" style="margin-right: 1%" alt="" title="" class="img-small">Dodaj novi kviz</h3>
+
+    <hr>
+    <label for="naziv"><b>Naziv</b></label>
+    <input type="text" class="form-control" placeholder="Naziv kviza" name="naziv" id="naziv" required [(ngModel)]="noviKviz.naziv">
+
+    <label for="VrstaKviza"><b>Vrsta kviza</b></label>
+    <input type="text" class="form-control" placeholder="Vrsta kviza" name="vrstaKviza" id="VrstaKviza" required [(ngModel)]="noviKviz.vrstaKviza">
+
+    <label for="VrstaKviza"><b>Opis</b></label>
+    <input type="text" class="form-control" placeholder="Opis kviza" name="opisKviza" id="Opis" required [(ngModel)]="noviKviz.opis">
+
+    <label for="DatumKviza"><b>Datum kviza</b></label>
+    <input class="form-control" type="date" placeholder="Datum kviza" name="DatumKviza" id="DatumKviza" required [(ngModel)]="noviKviz.datumKviza">
+    <br>
+    <label for="BrojPitanja"><b>Broj pitanja</b></label>
+    <input type="text" class="form-control" placeholder="Broj pitanja" name="email" id="BrojPitanja" required [(ngModel)]="noviKviz.brojPitanja">
+
+    <div class="mb-3">
+      <label class="form-label"><b>Moderator</b></label>
+      <select class="form-control" [(ngModel)]="noviKviz.moderatorId">
+        <option *ngFor="let a of moderatori" value="{{a.id}}">{{a.ime}}</option>
+      </select>
+    </div>
+    <hr>
+    <button style="margin-left: 80%" type="button" class="btn btn-secondary" (click)="odustani()">Odustani</button>
+    <button style="margin-left: 1%"   type="button" class="btn btn-primary" (click)="snimi()">Dodaj kviz</button>
+
+
+  </div>
+
+
+</form>
+
+
+
+
+
+

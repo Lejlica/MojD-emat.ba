@@ -1,0 +1,32 @@
+<main>
+  <div class="rectangle">
+    <p class="naslov">RAZGOVOR</p>
+  </div>
+
+
+
+  <div  class="right">
+
+    <div class="top">
+      <h1>Grupni chat</h1>
+    </div>
+
+    <div  id="myScrollableDiv" class="zaPoruke">
+      <div class="d-flex"  *ngFor="let x of servis.signaldata" >
+        <p class="sender">Ime:</p>
+        <p class="senderMsg" >{{x}}</p>
+
+      </div>
+
+
+    </div>
+    <button type="button" class="btn btn-info" (click)="servis.posaljiImePrezime()" >Šalji</button>
+    <input class="novaPoruka" placeholder="Aa"  [(ngModel)]="servis.poruka" (keyup.enter)="servis.posaljiImePrezime()">
+  </div>
+
+
+
+
+</main>
+
+

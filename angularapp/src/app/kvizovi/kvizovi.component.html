@@ -1,0 +1,124 @@
+<div class="rectangle">
+  <p class="naslov">ADMINISTRACIJA</p> <p class="podnaslov">upravljaj kvizovima</p>
+</div>
+<button style="margin-left: 45%" (click)="dodajKviz()"  type="button" class="btn btn-outline-none"><div style="margin-left: 50%;padding: 0px;margin-bottom: 0px"><img src="   https://cdn-icons-png.flaticon.com/512/3143/3143540.png " width="80" height="80" alt="" title="" class="img-small"><p style="padding-top: 1%"></p></div></button>
+<div class="main-container">
+  <td *ngFor="let s of getKv()" >
+
+
+    <div class="container">
+
+      <div class="children">
+        <div class="tekst">
+          <br>
+          <h2><img src="   https://cdn-icons-png.flaticon.com/512/3407/3407038.png " width="50" height="50" alt="" title="" class="img-small"> {{s.naziv}} </h2>
+          <h4>{{s.vrstaKviza}}</h4>
+          <h5>{{s.datum|date:'MM/dd/yyyy'}}</h5>
+
+          <h5>{{s.opis}}</h5>
+          <div style="margin-left: 33%; background-color: rgba(255,255,255,0.14);  box-shadow: 0px 0px 30px;width: 33%; margin-top: 2%; border-radius: 20px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px">
+            <div style="text-align: center">
+            <button   type="button" class="btn btn-outline-none" (click)="DodajPitanje(s)"><img src="   https://cdn-icons-png.flaticon.com/512/2891/2891421.png " width="35" height="35" alt="" title="" class="img-small"></button>
+
+            <button style="margin-left: 2%;" type="button" class="btn btn-outline-none" (click)="OdabraniKviz(s)"><img src="   https://cdn-icons-png.flaticon.com/512/4765/4765561.png " width="35" height="35" alt="" title="" class="img-small"></button>
+            <!--<button style="margin-left: 2%" type="button" class="btn btn-outline-light" (click)="PokreniKviz(s)">Pokreni</button>-->
+            <button style="margin-left: 2%;" type="button" class="btn btn-outline-none" (click)="AktivirajKviz(s)"><img src="   https://cdn-icons-png.flaticon.com/512/1783/1783433.png " width="40" height="40" alt="" title="" class="img-small"></button>
+            <button style="margin-left: 2%;" type="button" class="btn btn-outline-none" (click)="BtnUredi(s)"><img src="   https://cdn-icons-png.flaticon.com/512/2356/2356780.png " width="35" height="35" alt="" title="" class="img-small"></button>
+
+            <button style="margin-left: 2%" type="button" class="btn btn-outline-none" (click)="BtnObrisi(s)"><img src="   https://cdn-icons-png.flaticon.com/512/1214/1214428.png " width="35" height="35" alt="" title="" class="img-small"></button>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+  </td>
+</div>
+
+<div *ngIf="odabraniKviz!=null" id="exampleModalPopovers" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="exampleModalPopoversLabel" style="display: block; padding-right: 17px;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalPopoversLabel">Pitanja za {{odabraniKviz.naziv}}</h5>
+        <button type="button" class="close" data-dismiss="modal" (click)="odabraniKviz=null" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <td *ngFor="let s of GetPit()" >
+
+
+          <div class="containerr">
+
+            <div class="childrenn">
+              <div class="tekstt">
+                <br>
+                <p>{{s.id}}</p>
+                <p>{{s.tekst}}</p>
+
+              </div>
+            </div>
+          </div>
+
+
+        </td>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="odabraniKviz=null">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div *ngIf="odabraniKvizUredi!=null" class="modal fade show" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" aria-modal="true" role="dialog" style="display: block;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLiveLabel" >Uredi kviz </h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="odabraniKvizUredi=null"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label class="form-label">Naziv</label>
+          <input class="form-control" placeholder="Naslov" [(ngModel)]="odabraniKvizUredi.naziv">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Vrsta kviza</label>
+          <input class="form-control" placeholder="Opis" [(ngModel)]="odabraniKvizUredi.vrstaKviza"/>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Opis</label>
+          <input class="form-control" placeholder="Tekst" [(ngModel)]="odabraniKvizUredi.opis"/>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Datum kviza</label>
+          <input class="form-control" type="date" placeholder="Datum" [(ngModel)]="odabraniKvizUredi.datumKviza"/>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Broj pitanja</label>
+          <input class="form-control" [(ngModel)]="odabraniKvizUredi.brojPitanja"/>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label"><b>Moderator</b></label>
+          <select class="form-control" [(ngModel)]="odabraniKvizUredi.moderatorId">
+            <option *ngFor="let a of moderatori" value="{{a.id}}">{{a.ime}}</option>
+          </select>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="odabraniKvizUredi=null">Zatvori</button>
+          <button type="button" class="btn btn-primary" (click)="snimi()">Spasi promjene</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+

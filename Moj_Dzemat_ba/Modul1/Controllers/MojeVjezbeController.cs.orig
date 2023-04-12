@@ -1,0 +1,148 @@
+﻿using FIT_Api_Example.Data;
+using FIT_Api_Example.Helper;
+using FIT_Api_Example.Modul1.ViewModels;
+using FIT_Api_Example.Modul2.Models;
+using FIT_Api_Examples.Helper;
+using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
+
+namespace FIT_Api_Example.Modul2.Controllers
+{
+    //[Authorize]
+    [ApiController]
+    [Route("[controller]/[action]")]
+    public class MojeVjezbeController : ControllerBase
+    {
+        private readonly ApplicationDbContext _dbContext;
+
+        public MojeVjezbeController(ApplicationDbContext dbContext)
+        {
+            this._dbContext = dbContext;
+        }
+
+        
+     
+        [HttpPost]
+        public MojeVjezbe Snimi([FromBody] MojeVjezbeAddVM x)
+        {
+            MojeVjezbe? objekat;
+
+<<<<<<< HEAD
+            if (s.id == 0)
+=======
+            if (x.Id == 0)
+>>>>>>> f7767f6db674089c5aed7afa4eec359c4413afe0
+            {
+                objekat = new MojeVjezbe();
+                _dbContext.Add(objekat);//priprema sql
+            }
+            else
+            {
+<<<<<<< HEAD
+                objekat = _dbContext.MojeVjezbe.Find(s.id);
+            }
+
+            objekat.Id = s.id;
+            objekat.IsFinished = s.isFinished;
+            objekat.KorisnikId = s.korisnikId;
+            objekat.DuhovnaVjezbaId = s.duhovnaVjezbaId;
+           
+=======
+                objekat = _dbContext.MojeVjezbe.Find(x.Id);
+            }
+
+            objekat.Id = x.Id;
+            objekat.IsFinished = x.IsFinished;
+            objekat.KorisnikId=x.KorisnikId;
+            objekat.DuhovnaVjezbaId = x.DuhovnaVjezbaId;
+            
+            
+
+>>>>>>> f7767f6db674089c5aed7afa4eec359c4413afe0
+
+            _dbContext.SaveChanges(); //exceute sql -- update Predmet set ... where...
+            return objekat;
+        }
+
+<<<<<<< HEAD
+        public class MojeVjezbeGetAllVM
+        {
+            public int id { get; set; }
+            public bool isFinished { get; set; }
+            public int korisnikId { get; set; }
+            public int duhovnaVjezbaId { get; set; }
+            public string naslov { get; set; }
+            public string? slika_nova_base64 { get; set; }
+            //public string opis { get; set; }
+            //public string tekst { get; set; }
+            //public DateTime datumPocetka { get; set; }
+            //public DateTime datumZavrsetka { get; set; }
+            //public bool isActive { get; set; }
+
+        }
+        [HttpGet("{vjezbaid}")]
+        public ActionResult GetSlikaKorisnika(int vjezbaid)
+        {
+            //if (!HttpContext.GetLoginInfo().isLogiran)
+            //    return BadRequest("nije logiran");
+
+            byte[] bajtovi = _dbContext.DuhovnaVjezba.Find(vjezbaid).slika_korisnika_bytes;
+
+            if (bajtovi == null)
+            {
+                bajtovi = Fajlovi.Ucitaj(Config.SlikeFolder + "empty.png");
+            }
+
+            return File(bajtovi, "image/png");
+        }
+
+=======
+>>>>>>> f7767f6db674089c5aed7afa4eec359c4413afe0
+        [HttpGet]
+        public ActionResult GetAll(int? korisnikId)
+        {
+            var data = _dbContext.MojeVjezbe
+                .OrderBy(s => s.Id).Where(s=>s.KorisnikId==korisnikId)
+                .Select(s => new MojeVjezbeGetVM
+                {
+<<<<<<< HEAD
+                    id=s.Id,
+                    isFinished=s.IsFinished,
+                    korisnikId =s.KorisnikId,    
+                    duhovnaVjezbaId =s.DuhovnaVjezbaId,
+                    naslov=s.DuhovnaVjezba.Naslov
+                    //opis=s.DuhovnaVjezba.Opis,
+                    //tekst=s.DuhovnaVjezba.Tekst,
+                    //datumPocetka=s.DuhovnaVjezba.DatumPocetka,
+                    //datumZavrsetka=s.DuhovnaVjezba.DatumZavrsetka,
+                    //isActive=s.DuhovnaVjezba.IsActive
+                    
+                    
+=======
+                    id = s.Id,
+                    isFinished = s.IsFinished,
+                    korisnikId = s.KorisnikId,    
+                    duhovnaVjezba = s.DuhovnaVjezba.Naslov,
+                    duhovnaVjezbaId=s.DuhovnaVjezbaId
+>>>>>>> f7767f6db674089c5aed7afa4eec359c4413afe0
+                })
+                .Take(100).ToList();
+            // order byb skip i take 
+            return Ok(data);
+        }
+
+        [HttpPost("{id}")]
+        public ActionResult Delete(int id)
+        {
+            MojeVjezbe? myVj = _dbContext.MojeVjezbe.Find(id);
+
+            if (myVj == null)
+                return BadRequest("pogresan ID");
+
+            _dbContext.Remove(myVj);
+
+            _dbContext.SaveChanges();
+            return Ok(myVj);
+        }
+    }
+}

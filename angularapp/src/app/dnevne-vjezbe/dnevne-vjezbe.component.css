@@ -1,0 +1,99 @@
+*{
+  box-sizing: border-box;
+}
+.naslov{
+  text-align: center;
+  top: 40px;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 20px;
+  color: #258a89;
+}
+.nazivNafile{
+  text-align: center;
+  top: 70px;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 20px;
+
+}
+.rectangle{
+  height: 180px;
+  background: #eaeaea;
+
+}
+
+main{
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  align-items: center;
+}
+footer{
+  position: relative;
+  top: 90%;
+
+}
+.lekcijaDiv{
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  left: 10%;
+  top: 25%;
+
+  background: #34AFAE;
+  border-radius: 13px;
+}
+.nazivLekcije{
+  left: 20%;
+  top: 42%;
+  position: absolute;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 20px;
+}
+.danSedmice{
+  box-sizing: border-box;
+  top: 10%;
+  position: absolute;
+  width: 13%;
+  height: 80%;
+  left: 18px;
+  text-align: center;
+  background: #FFFFFF;
+
+  border: 3px solid #333333;
+  border-radius: 13px;
+}
+.jedanDan{
+  margin-top: 23%;
+  font-size: xx-large;
+
+}
+.btn-prijaviSe{
+  position: relative;
+  top: 33%;
+  left: 85%;
+
+  width: 130px;
+  height: 55px;
+
+  background: rgb(255, 255, 255);
+  border: 3px solid #333333;
+  border-radius: 13px;
+}
+.btn-prijaviSe:hover{
+  background-color: #c7eeed;
+}
+.container{
+  position: relative;
+  height: 15%;
+}

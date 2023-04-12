@@ -1,0 +1,31 @@
+<main>
+  <div class="rectangle">
+    <p class="naslov">DNEVNA LEKCIJA</p> <p class="nazivDnevne" *ngFor="let x of dnevnaPodaci">{{x.naslov}}</p>
+  </div>
+
+  <div class="article1">
+    <h2>Uvod</h2>
+    <p *ngFor="let x of dnevnaPodaci">{{x.uvod}} </p>
+  </div>
+
+  <div class="article2">
+    <h2>Tekst</h2>
+    <p *ngFor="let x of dnevnaPodaci">{{x.tekst}} </p>
+  </div>
+  <button class="btn-amin" (click)="rutiaj()">Amin</button>
+
+  <footer id="f" class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      </a>
+      <span class="text-muted">&copy; 2023 Moster, Inc</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+    </ul>
+  </footer>
+</main>

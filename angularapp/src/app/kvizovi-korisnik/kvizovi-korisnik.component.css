@@ -1,0 +1,43 @@
+
+.main-container{
+  width: 100%;
+  height: 100%;
+  display: block;
+  width: 100%;
+}
+
+.container{
+  float: left;
+  display: block;
+  max-width: 70%;
+  margin-left: 15%;
+  margin-top: 2%;
+  background-color:#b8deb8;
+  border-radius: 20px;
+  box-shadow: 2px 5px 20px;
+
+}
+td{
+  float: left;
+  display: block;
+  width: 100%;
+}
+
+.children{
+  text-align: left;
+  padding-left: 90px;
+  width: 100%;
+  margin-bottom: 2%;
+  margin-right: 0px;
+  display: block;
+  padding-right: 90px;
+  margin-top: 2%;
+  box-shadow: 2px 5px 20px;
+  background-color: #cee8ce;
+  border-radius: 20px;
+}
+button{
+  margin-bottom: 2%;
+  margin-top: 2%;
+
+}

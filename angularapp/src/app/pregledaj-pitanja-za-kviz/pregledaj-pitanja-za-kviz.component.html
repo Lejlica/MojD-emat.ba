@@ -1,0 +1,53 @@
+<div class="brojPitanja"><h4>Broj pitanja: {{brojPitanja}}</h4></div>
+<td *ngFor="let s of GetPit()" >
+
+
+  <div class="containerr">
+
+    <div class="children">
+      <div class="tekst">
+        <br>
+        <b><p> <img src="https://cdn-icons-png.flaticon.com/512/5824/5824345.png" width="50" height="50" style="margin-right: 2%" alt="Quiz free icon" title="Quiz free icon">Pitanje: {{s.tekst}}</p></b>
+        <tr *ngFor="let p of s.ponudjeniOdgovori">
+
+          <p>- {{p.tekst}}</p>
+
+          <!--<p *ngIf="s.isCorrect1==true"> Tacan je prvi{{s.isCorrect1}}</p>
+          <p *ngIf="s.isCorrect2==true"> Tacan je drugi{{s.isCorrect2}}</p>
+          <p *ngIf="s.isCorrect3==true"> Tacan je treci{{s.isCorrect3}}</p>-->
+
+
+        </tr>
+        <br>
+        <p>Aktivno?</p>
+        <div class="form-check">
+          <input style="margin-top: 1.5%" type="checkbox" class="form-check-input"  required [(ngModel)]="s.isActive" [ngModelOptions]="{standalone: true}">
+          <label class="form-check-label"><button  type="button" class="btn btn-outline-none" (click)="SnimiIsActivePitanje(s)"><img  src="   https://cdn-icons-png.flaticon.com/512/482/482459.png " width="30" height="30" alt="" title="" class="img-small"></button></label>
+
+        </div>
+
+        <br>
+        <div class="tacanodg">
+          <div *ngIf="s.isCorrect1==true;then content else other_content"></div>
+          <ng-template #content><img src="   https://cdn-icons-png.flaticon.com/512/8968/8968524.png " width="30" height="30" style="margin-right: 1%" alt="" title="" class="img-small">Tacan odgovor je: {{s.ponudjeniOdgovori[0].tekst}}</ng-template>
+          <ng-template #other_content>
+            <div *ngIf="s.isCorrect2==true;then contentt else other_contentt"></div>
+            <ng-template #contentt><img src="   https://cdn-icons-png.flaticon.com/512/8968/8968524.png " width="30" height="30" style="margin-right: 1%" alt="" title="" class="img-small">Tacan odgovor je: {{s.ponudjeniOdgovori[1].tekst}}</ng-template>
+          </ng-template>
+          <ng-template #other_contentt>
+            <div *ngIf="s.isCorrect3==true;then content3 else other_contenttt"></div>
+            <ng-template #content3><img src="   https://cdn-icons-png.flaticon.com/512/8968/8968524.png " width="30" height="30" style="margin-right: 1%" alt="" title="" class="img-small">Tacan odgovor je: {{s.ponudjeniOdgovori[2].tekst}}</ng-template>
+          </ng-template>
+          <ng-template #other_contenttt>
+            <div *ngIf="s.isCorrect4==true;then content4 "></div>
+            <ng-template #content4><img src="   https://cdn-icons-png.flaticon.com/512/8968/8968524.png " width="30" height="30" style="margin-right: 1%" alt="" title="" class="img-small">Tacan odgovor je: {{s.ponudjeniOdgovori[3].tekst}}</ng-template>
+          </ng-template>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</td>
+

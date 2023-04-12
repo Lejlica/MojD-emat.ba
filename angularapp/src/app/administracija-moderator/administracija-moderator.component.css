@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+}
+main{
+  height: 1500px;
+}
+.naslov{
+  text-align: center;
+  top: 40px;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 20px;
+  color: #258a89;
+}
+.rectangle{
+  height: 100px;
+  background: #F7F7F7;
+}
+.btn{
+  position: relative;
+  margin: 30px;
+  width: 40%;
+  height: 250px;
+  left: 7%;
+  font-size: xx-large;
+}
+#btn-kviz{
+  background-color:#6D67E4 ;
+}
+#btn-kviz:hover{
+  background-color: rgba(74, 85, 208, 0.76);
+}
+#btn-imami:hover{
+  background-color: rgb(176, 227, 232);
+}
+#btn-moderatori{
+  background-color: rgb(144, 175, 101);
+}
+#btn-imami{
+  background-color: rgb(123, 190, 197);
+}
+#btn-moderatori:hover{
+  background-color: rgb(135, 155, 103);
+}
+#btn-muftijstva{
+  background-color:#46C2CB ;
+}
+#btn-muftijstva:hover{
+  background-color: rgba(40, 217, 195, 0.77);
+}
+#btn-nafile{
+  background-color: #45c5b0;
+}
+#btn-nafile:hover{
+  background-color: rgba(160, 232, 161, 0.78);
+}
+#btn-medzlisi{
+  background-color: #eef585;
+}
+#btn-medzlisi:hover{
+  background-color: rgba(255, 241, 51, 0.71);
+}

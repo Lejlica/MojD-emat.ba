@@ -1,0 +1,68 @@
+
+<div class="main-container">
+  <section class="naslov">
+    <div class="containerNaslov">
+      <div class="red">
+        <div class="text_center">
+          <b><h1 class="uppercase mb0" style="color: #579a25">DŽEMATSKE AKTIVNOSTI</h1></b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="naslov_aktuelne">
+    <b><h1 class="Aktuelne">Aktuelne</h1></b>
+  </div>
+  <td *ngFor="let s of getAktivne()" >
+    <div class="sekcija">
+
+      <div class="container">
+        <div class="children">
+          <h2>{{s.naziv}} </h2>
+          <h4 style="color: #b71414"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-calendar" viewBox="0 0 25 20">
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+          </svg>
+            {{s.datum|date:'MM/dd/yyyy'}}</h4>
+          <h5>{{s.opis}}</h5>
+          <br>
+          <h5><img src="   https://cdn-icons-png.flaticon.com/512/2991/2991231.png " style="margin-right: 1%" width="30" height="30" alt="" title="" class="img-small">{{s.lokacija}}</h5>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-secondary" (click)="otkaziPrijavu(s)">OTKAŽI PRIJAVU</button>
+      <button type="button" class="btn btn-success" (click)="prijaviSeNaAktivnost(s)">DOLAZIM</button>
+
+    </div>
+  </td>
+
+
+
+
+
+
+  <div class="naslov_zavrsene">
+    <div class="Zavrsene"><b><h1 >Završene</h1></b></div>
+  </div>
+  <td *ngFor="let s of getZavrsene()" >
+
+    <div class="container">
+      <div class="children">
+        <h2>{{s.naziv}} </h2>
+        <h4 style="color: #727171"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-calendar" viewBox="0 0 25 20">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+          {{s.datum|date:'MM/dd/yyyy'}}</h4>
+        <br>
+        <div class="opis">
+          <h5>{{s.opis}}</h5>
+        </div>
+      </div>
+    </div>
+
+  </td>
+
+
+</div>
+
+
+

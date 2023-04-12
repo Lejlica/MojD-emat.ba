@@ -1,0 +1,35 @@
+.modal-body{
+  width: 50%;
+  position: center;
+  margin-left: 35%;
+  margin-top: 7%;
+  padding-top: 3%;
+  border-radius: 10px;
+}
+.postavke {
+  height: 520px;
+  width: 25%;
+  font-size: 20px;
+  font-family: Times;
+  text-align: center;
+  margin: 0px;
+  margin-top: 1%;
+  margin-left: 3%;
+  font-family:Arial;
+  border-right: 1px solid #afadad;
+  float: left;
+}
+.container{
+  box-shadow: 2px 5px 20px;
+  background-color: #ffffff;
+border-radius: 20px;
+}
+img{
+  width: 60%;
+  align-content: center;
+
+}
+h5{
+  padding-top: 10%;
+  text-align: left;
+}

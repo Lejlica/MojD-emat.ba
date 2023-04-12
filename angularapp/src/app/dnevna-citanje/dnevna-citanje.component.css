@@ -1,0 +1,75 @@
+*{
+  box-sizing: border-box;
+}
+.naslov{
+  text-align: center;
+  top: 40px;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 20px;
+  color: #258a89;
+}
+.nazivDnevne{
+  text-align: center;
+  top: 70px;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 20px;
+
+}
+.rectangle{
+  height: 180px;
+  background: #eaeaea;
+
+}
+
+main{
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  align-items: center;
+}
+footer{
+  position: relative;
+  top: 90%;
+}
+.article1{
+  position: relative;
+  top: 20%;
+  left: 25%;
+  margin: -50px 0 70px -50px;
+  width: 65%;
+
+}
+.article2{
+  position: relative;
+  top: 20%;
+  left: 25%;
+  margin: -50px 0 70px -50px;
+  width: 65%;
+
+}
+h2{
+  margin-bottom: 30px;
+}
+.btn-amin{
+  position: relative;
+  top: 20%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  width: 130px;
+  height: 55px;
+
+  background: #FFFFFF;
+  border: 3px solid #333333;
+  border-radius: 8px;
+}
+.btn-amin:hover{
+  background-color: #4fcecd;
+}

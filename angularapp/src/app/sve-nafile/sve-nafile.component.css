@@ -1,0 +1,76 @@
+*{
+  box-sizing: border-box;
+}
+.naslov{
+  text-align: center;
+  top: 40%;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 20px;
+  color: rgba(32, 155, 96, 0.94);
+}
+.rectangle{
+  height: 160px;
+  background: #F7F7F7;
+  position: sticky;
+}
+.sekcija{
+  position: relative;
+  height: 650px;
+}
+.container{
+  background-color:  #f8f9fa;
+  height: 80%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+.slika{
+  top: 5%;
+  height: 70%;
+  width: 45%;
+  position: absolute;
+  left: 45%;
+  background-color: #bcdecd;
+  border-radius: 10px;
+}
+.info{
+  top: 20%;
+  left: 10%;
+  height: 40%;
+  width: 35%;
+  position: absolute;
+  text-align: center;
+}
+button{
+  position: relative;
+  color: #FFFFFF;
+  width: 100px;
+  height: 48px;
+  margin-top: 10%;
+  background: rgba(32, 155, 96, 0.94);
+  border: 0px solid #333333;
+  border-radius: 8px;
+}
+button:hover{
+  background-color: rgba(102, 155, 129, 0.94);
+  color: #333333;
+}
+
+img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+h5{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.opis{
+  margin-right: 15px;
+}

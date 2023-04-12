@@ -1,0 +1,30 @@
+<main>
+  <div class="rectangle">
+    <p class="naslov">Upravljanje nafilom</p>
+    <p class="nazivNafile" *ngFor="let x of vjezbaPodaci">{{x.naslov}} </p>
+  </div>
+
+  <div class="info">
+    <p id="p1" class="p">Naziv:</p>
+    <p id="p2" class="p">Datum početka:</p>
+    <p id="p3" class="p">Datum završetka:</p>
+    <p id="p4" class="p">Broj polaznika:</p>
+  </div>
+  <div class="rectangle2">
+    <p class="podNaslov">Dnevne vježbe</p>
+  </div>
+
+
+  <div class="container" *ngFor="let x of dnevneVjezbePodaci">
+    <div class="lekcijaDiv">
+      <div class="danSedmice"><p class="jedanDan">DAN</p></div>
+      <p class="nazivLekcije" >{{x.naslov}}</p>
+      <button class="btn-prijaviSe" (click)="citajVjezbu(x)">Otvori</button>
+    </div>
+  </div>
+
+  <div class="form-group6">
+    <button type="button" class="btn" (click)="novaDnevna()"  >Dodaj dnevnu vježbu</button>
+  </div>
+
+</main>

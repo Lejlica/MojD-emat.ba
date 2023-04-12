@@ -1,0 +1,114 @@
+.text_center{
+  background-color: rgba(231, 225, 221, 0.6);
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin: auto;
+  box-shadow: inset 0 0 20px #a19d9d;
+}
+.uppercase{
+  text-align: center;
+}
+.naslov_aktuelne{
+  padding-top: 4%;
+  text-align: center;
+  background-color: white !important;
+  border-bottom: 1px solid black;
+  padding-bottom: 4%;
+  text-align: center;
+  width: 100%;
+  float: left;
+  height: 3%;
+
+}
+.naslov_zavrsene{
+  padding-top: 2%;
+  text-align: center;
+  background-color: white !important;
+  border-bottom: 1px solid black;
+  padding-bottom: 4%;
+  text-align: center;
+  width: 100%;
+  float: left;
+  height: 3%;
+
+}
+.btn-secondary{
+
+  margin-top: 2%;
+
+  margin-left: 40%;
+  margin-bottom: 2%;
+  height: 50px;
+  width: 150px;
+}
+.btn-success{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  height: 50px;
+  margin-right: 15%;
+  margin-left: 2%;
+  height: 50px;
+  width: 150px;
+}
+
+.main-container{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.children{
+  text-align: left;
+  padding-left: 90px;
+  width: 100%;
+
+  margin-right: 0;
+  display: block;
+  padding-right: 90px;
+  margin-top: 4%;
+}
+td{
+
+  float: left;
+  display: block;
+  background-color: rgba(231, 225, 221, 0.6);
+  width: 100%;
+}
+.container{
+  float: left;
+  display: block;
+  max-width: 100%;
+
+}
+.prazan_div{
+  background-color: white;
+  height: 300px;
+}
+.Aktuelne{
+  text-align: center;
+
+}
+.bi bi-calendar
+{
+  padding: 2px;
+}
+.opis{
+  border-bottom: 1px solid black;
+  padding-bottom:4%;
+}
+.Zavrsene{
+  text-align: center;
+  margin-top: 2%;
+
+}
+.prazan{
+  width: 100%;
+  background-color: white;
+}
+.sekcija{
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+

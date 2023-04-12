@@ -1,0 +1,136 @@
+*{
+  box-sizing: border-box;
+}
+.naslov{
+  text-align: center;
+  top: 40px;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 20px;
+  color: #6B54CA;
+  margin-bottom: 5%;
+}
+.podNaslov{
+  text-align: center;
+  top: 40px;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 20px;
+  color: #6B54CA;
+  margin-bottom: 10%;
+}
+.nazivNafile{
+  text-align: center;
+  top: 40px;
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 20px;
+}
+.rectangle{
+  height: 200px;
+  background: #eaeaea;
+}
+.rectangle2{
+  height: 100px;
+  background: #eaeaea;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  border-top: 2px solid #333333;
+}
+main{
+  height: 400%;
+}
+.p{
+  position: relative;
+  margin-left: 17%;
+  font-style: normal;
+
+  font-size: 18px;
+
+}
+.info{
+  margin-top: 5%;
+  position: relative;
+}
+.container{
+  position: relative;
+  height: 15%;
+}
+
+.lekcijaDiv{
+  position: relative;
+  width: 80%;
+  height: 90%;
+  left: 10%;
+  top: 25%;
+  margin-bottom: 2%;
+  background: #56a8a7;
+  border-radius: 13px;
+}
+.nazivLekcije{
+  left: 20%;
+  position: relative;
+  margin-top: -20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 20px;
+}
+.danSedmice{
+  box-sizing: border-box;
+  top: 35px;
+  position: relative;
+  width: 13%;
+  height: 80%;
+  left: 18px;
+  text-align: center;
+  background: #FFFFFF;
+
+  border: 3px solid #333333;
+  border-radius: 13px;
+}
+.btn-prijaviSe{
+  position: relative;
+  left: 85%;
+  top: -50px;
+  width: 130px;
+  height: 55px;
+
+  background: rgb(255, 255, 255);
+  border: 3px solid #333333;
+  border-radius: 13px;
+}
+.btn-prijaviSe:hover{
+  background-color: #429a98;
+}
+.jedanDan {
+  position: relative;
+  margin-top: 15px;
+  font-size: xx-large;
+}
+.form-group6{
+  position: relative;
+  width: 20%;
+  align-items: center;
+  top: 170%;
+  left: 74%;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+button{
+  background-color: #7fc5c4;
+  width: 150px;
+  border: 2px solid #333333;
+  border-radius: 8px;
+}
+button:hover{
+  background-color: #419190;
+}

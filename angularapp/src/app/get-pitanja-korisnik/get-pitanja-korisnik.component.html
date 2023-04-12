@@ -1,0 +1,62 @@
+<div *ngIf="div1!=false" class="vvv">
+  <img src="https://cdn-icons-png.flaticon.com/512/942/942751.png " width="50" height="50" style="margin-right: 1%" alt="" title="" class="img-small"><b>{{pitanja.pitanja[brojac1-1].pitanje.tekst}}</b>
+  <hr>
+  <br><br>
+  <div style="margin-top: 2%">
+    <img src="   https://cdn-icons-png.flaticon.com/512/8151/8151726.png " width="50" height="50" style="margin-right: 1%" alt="" title="" class="img-small">Vaš odgovor: {{odabraniOdg}}
+  </div>
+  <br>
+
+  <div class="children">
+    <div class="tekst">
+      <br>
+      <div class="tacanodg">
+        <div *ngIf="pitanjaa[brojac1-1].isCorrect1==true;then content else other_content"></div>
+        <ng-template #content><img src="   https://cdn-icons-png.flaticon.com/512/8968/8968524.png " width="50" height="50" style="margin-right: 1%" alt="" title="" class="img-small">Tacan odgovor je: {{pitanjaa[brojac1-1].ponudjeniOdgovori[0].tekst}}</ng-template>
+        <ng-template #other_content>
+          <div *ngIf="pitanjaa[brojac1-1].isCorrect2==true;then contentt else other_contentt"></div>
+          <ng-template #contentt><img src="   https://cdn-icons-png.flaticon.com/512/8968/8968524.png " width="50" height="50" style="margin-right: 1%" alt="" title="" class="img-small">Tacan odgovor je: {{pitanjaa[brojac1-1].ponudjeniOdgovori[1].tekst}}</ng-template>
+        </ng-template>
+        <ng-template #other_contentt>
+          <div *ngIf="pitanjaa[brojac1-1].isCorrect3==true;then content3 else other_contenttt"></div>
+          <ng-template #content3><img src="   https://cdn-icons-png.flaticon.com/512/8968/8968524.png " width="50" height="50" style="margin-right: 1%" alt="" title="" class="img-small">Tacan odgovor je: {{pitanjaa[brojac1-1].ponudjeniOdgovori[2].tekst}}</ng-template>
+        </ng-template>
+        <ng-template #other_contenttt>
+          <div *ngIf="pitanjaa[brojac1-1].isCorrect4==true;then content4 "></div>
+          <ng-template #content4><img src="   https://cdn-icons-png.flaticon.com/512/8968/8968524.png " width="50" height="50" style="margin-right: 1%" alt="" title="" class="img-small">Tacan odgovor je: {{pitanjaa[brojac1-1].ponudjeniOdgovori[3].tekst}}</ng-template>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-left: 70%;margin-top: 15%;width: 100%" >
+    <button type="button" class="btn btn-outline-secondary" (click)="odustani()">Odustani</button>
+    <button type="button" class="btn btn-outline-secondary" style="margin-left: 2%" (click)="nazad()">Nazad</button>
+    <button type="button" class="btn btn-outline-primary" style="margin-left: 2%" (click)="dereferenciraj()">Sljedeći</button>
+
+  </div>
+</div>
+
+
+
+<div class="main-container">
+  <div class="brPitt"><h3 >Broj pitanja: {{brojPitanja}}</h3></div>
+
+  <div class="pitanje" style="  box-shadow: 2px 5px 10px;padding-bottom: 2%;padding: 1%;margin-left: 20%;width: 60%;border-radius: 5px;background-color: #cee8ce;margin-top: 1%;height: 20%; margin-bottom: 1%;">
+    <b><img src="https://cdn-icons-png.flaticon.com/512/942/942751.png " style="margin-right: 1%" width="40" height="40" alt="" title="" class="img-small"> {{brojac+"."}} {{" "}}{{pitanja.pitanja[brojac-1].pitanje.tekst}}</b>
+  </div>
+
+  <div class="ponudjeniOdgovori">
+    <td *ngFor="let o of pitanja.pitanja[brojac-1].pitanje.ponudjeniOdgovori">
+      <div class="form-check">
+        <input type="radio" class="form-check-input" (click)="SnimiOdgovor(o)">{{o.tekst}}
+      </div>
+    </td>
+  </div>
+
+  <div style="float: left; margin-top:1%;margin-left:46%;width: 50%">
+    <button type="button" class="btn btn-outline-success" (click)="back()"><img src="   https://cdn-icons-png.flaticon.com/512/271/271218.png " width="50" height="50" alt="" title="" class="img-small"></button>
+    <button style="margin-left: 4%;" type="button" class="btn btn-outline-success" (click)="next()"><img src="   https://cdn-icons-png.flaticon.com/512/271/271226.png " width="50" height="50" alt="" title="" class="img-small"></button>
+    <button style="margin-left: 25%"  type="button" class="btn btn-outline-success" (click)="div1Function()">Pregledaj rezultate</button>
+  </div>
+</div>

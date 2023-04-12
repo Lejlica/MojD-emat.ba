@@ -1,0 +1,22 @@
+.mainn {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  margin-left: 16%;
+  margin-top:3%;
+  padding: 5px;
+  width: 80%;
+  align-content: center;
+}
+.mainn div {
+  padding-top: 6%;
+  margin: 10px 20px;
+  width: 500px;
+  height: 500px;
+  box-shadow: 5px 10px 8px #888888;
+}
+img{
+  margin-top: 33%;
+}

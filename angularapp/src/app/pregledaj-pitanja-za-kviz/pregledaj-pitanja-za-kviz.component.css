@@ -1,0 +1,49 @@
+
+.main-containerr{
+  width: 100%;
+  height: 100%;
+  display: block;
+  width: 100%;
+}
+
+.containerr{
+  float: left;
+  display: block;
+  max-width: 70%;
+  margin-left: 15%;
+  margin-top: 2%;
+  background-color: #cee8ce;
+  padding-bottom: 2%;
+  box-shadow: 2px 5px 7px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  width: 100%;
+}
+td{
+  float: left;
+  display: block;
+  width: 100%;
+}
+
+
+button{
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+.tacanodg{
+  background-color: rgba(209, 231, 230, 0.24);
+  box-shadow: 2px 5px 30px;
+}
+.brojPitanja{
+  float: left;
+  display: block;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 2%;
+  background-color: #cee8ce;
+  padding-bottom: 2%;
+  box-shadow: 2px 5px 7px;
+  text-align: center;
+  padding: 1%;
+}

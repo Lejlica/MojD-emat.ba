@@ -1,0 +1,91 @@
+*{
+  box-sizing: border-box;
+}
+.naslov{
+  text-align: center;
+  top: 40px;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 20px;
+  color: #6B54CA;
+  margin-bottom: 5%;
+}
+.naslov2{
+  text-align: center;
+  top: 40px;
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 20px;
+  color: #333333;
+  margin-bottom: 10%;
+}
+.rectangle{
+  height: 110px;
+  background: #eaeaea;
+}
+.rectangle2{
+  border-top: 2px solid #333333;
+  height: 110px;
+  background: #d5d3e0;
+}
+.tabelap{
+  position: relative;
+  top: 20px;
+  left: 10%;
+  width: 80%;
+  border: 2px solid #333333;
+  border-radius: 6px;
+  margin-bottom: 15%;
+  margin-top: 5%;
+}
+main{
+  height: 400%;
+}
+.form-group6{
+  position: relative;
+  width: 20%;
+  align-items: center;
+  margin-top: 5%;
+  left: 45%;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+.form-group7{
+  position: relative;
+  width: 20%;
+  align-items: center;
+  margin-top: 5%;
+  left: 45%;
+  margin-bottom: 3%;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 20px;
+}
+.form-group8{
+  position: relative;
+  width: 20%;
+  align-items: center;
+  margin-top: 5%;
+  left: 44%;
+  margin-bottom: 3%;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 20px;
+}
+button{
+  background-color: #c0aef3;
+  width: 130px;
+  border: 2px solid rgba(30, 30, 30, 0.94);
+  border-radius: 8px;
+}
+button:hover{
+  background-color: #5e42d5;
+}

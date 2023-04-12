@@ -1,0 +1,31 @@
+<main>
+  <div class="rectangle">
+    <p class="naslov">Nova dnevna lekcija</p>
+  </div>
+
+  <div class="form-group0">
+    <label for="exampleFormControlTextarea1">Naslov:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea0" rows="3" placeholder="..." [(ngModel)]="dnevnaDetalji.naslov"></textarea>
+  </div>
+
+  <div class="form-group1">
+    <label for="exampleFormControlTextarea1">Uvod:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="..." [(ngModel)]="dnevnaDetalji.uvod"></textarea>
+  </div>
+
+  <div class="form-group2">
+    <label for="exampleFormControlTextarea1">Tekst:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" placeholder="..." [(ngModel)]="dnevnaDetalji.tekst"></textarea>
+  </div>
+
+
+  <div class="form-group6">
+    <button type="button" class="btn" (click)="spasiNovuDnevnuVjezbu()"  >Spasi</button>
+  </div>
+
+
+
+</main>
+
+
+

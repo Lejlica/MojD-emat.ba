@@ -1,0 +1,73 @@
+<main>
+  <div class="rectangle">
+    <p class="naslov">Pregled nafila</p>
+  </div>
+
+  <div class="form-group6">
+    <button type="button" class="btn" (click)="novaNafila()">Nova nafila</button>
+  </div>
+
+
+  <div class="rectangle2">
+    <p class="naslov2">Aktivne</p>
+  </div>
+
+
+
+  <div class="tabelap">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+
+
+        <th>Naziv</th>
+        <th>Datum početka</th>
+        <th>Datum završetka</th>
+        <th>Broj polaznika</th>
+        <th>Detalji</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let x of vjezbaPodaci">
+        <td>{{x.naslov}}</td>
+        <td>{{x.datumPocetka}}</td>
+        <td>{{x.datumZavrsetka}}</td>
+        <td>{{x.trajanje}}</td>
+        <td><button type="button" class="btn btn-secondary" (click)="editNafila(x)">Uredi</button></td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="rectangle2">
+    <p class="naslov2">Završene</p>
+  </div>
+
+  <div class="tabelap">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+
+
+        <th>Naziv</th>
+        <th>Datum početka</th>
+        <th>Datum završetka</th>
+        <th>Broj polaznika</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let x of vjezbaPodaci">
+        <td>{{x.naslov}}</td>
+        <td>{{x.datumPocetka}}</td>
+        <td>{{x.datumZavrsetka}}</td>
+        <td>{{x.trajanje}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</main>
+

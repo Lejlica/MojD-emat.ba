@@ -1,0 +1,29 @@
+<div class="main-containerr">
+  <td *ngFor="let s of getAktiv()" >
+
+
+    <div class="container">
+
+      <div class="children">
+        <div class="tekst">
+          <br>
+          <h2><img src="   https://cdn-icons-png.flaticon.com/512/3407/3407038.png " width="50" height="50" alt="" title="" class="img-small"> {{s.naziv}} </h2>
+          <h4>{{s.vrstaKviza}}</h4>
+          <h5>{{s.datum|date:'MM/dd/yyyy'}}</h5>
+
+          <h5>{{s.opis}}</h5>
+
+
+
+          <button style="margin-left: 45%; background-color: #76a470" type="button" class="btn btn-light" (click)="KorisnikKviz(s)"><b>Pokreni</b></button>
+
+        </div>
+      </div>
+    </div>
+
+
+  </td>
+</div>
+
+
+

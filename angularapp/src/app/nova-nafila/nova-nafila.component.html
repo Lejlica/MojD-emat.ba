@@ -1,0 +1,45 @@
+<main>
+  <div class="rectangle">
+    <p class="naslov">Nova nafila</p>
+  </div>
+
+  <div class="form-group0">
+    <label for="exampleFormControlTextarea1">Naslov:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea0" rows="3" placeholder="..." [(ngModel)]="nafilaDetalji.naslov"></textarea>
+  </div>
+
+  <div class="form-group1">
+    <label for="exampleFormControlTextarea1">Kratki opis:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="..." [(ngModel)]="nafilaDetalji.opis"></textarea>
+  </div>
+
+  <div class="form-group2">
+    <label for="exampleFormControlTextarea1">O vježbi:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" placeholder="..." [(ngModel)]="nafilaDetalji.tekst"></textarea>
+  </div>
+
+  <div class="form-group3">
+    <label class="form-label">Datum početka</label>
+    <input class="form-control" type="date"  placeholder="..." [(ngModel)]="nafilaDetalji.datumPocetka">
+  </div>
+
+  <div class="form-group4">
+    <label class="form-label">Datum završetka</label>
+    <input class="form-control" type="date"  placeholder="..." [(ngModel)]="nafilaDetalji.datumZavrsetka">
+  </div>
+
+  <div class="form-group5">
+    <label class="form-label">Dodaj sliku</label>
+    <input class="form-control" id="slika-input" type="file"  accept="image/*" (change)="generisi_preview()" />
+    <img style="max-width: 100%; height: 200px" src="{{nafilaDetalji.slika_nova_base64}}">
+  </div>
+
+  <div class="form-group6">
+    <button type="button" class="btn" (click)="spasiNovuNafilu()"  >Spasi</button>
+  </div>
+
+
+
+</main>
+
+

@@ -1,0 +1,59 @@
+<!--<div *ngIf="alertd==true " class="alert alert-success alert-dismissible fade show" role="alert">
+
+  <strong>Uspješno</strong> ste izmijenili vaše podatke
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div *ngIf="alertd==false && alertWarning==true" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Provjerite</strong> staru lozinku
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div *ngIf="alertPostojeceKorisIme" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Korisnicko nije dostupno</strong>, molimo pokušajte drugo
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>-->
+<div class="container">
+
+  <div class="postavke">
+    <img style="border-radius: 30%" src="https://www.pngarts.com/files/10/Default-Profile-Picture-PNG-Free-Download.png" alt="Italian Trulli">
+    <br>
+    <h5><a  style="color: black" routerLink="/postavke-profila" ><b>Javni profil</b></a></h5>
+    <h5><a style="color: black" routerLink="/izmjena-lozinke" ><b>Postavke računa</b></a></h5>
+    <h5><a style="color: black" routerLink="" ><b>PRO račun</b></a></h5>
+    <h5><a style="color: black" routerLink="" ><b>Obavijesti</b></a></h5>
+  </div>
+
+  <div class="modal-body">
+    <h2>Postavke računa</h2>
+    <br>
+
+    <div class="mb-3">
+      <label class="form-label">Stara lozinka</label>
+      <input type="password" class="form-control " placeholder="Stara lozinka" required [(ngModel)]="korisnik.staraLozinka"/>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Nova lozinka</label>
+      <input type="password" class="form-control" placeholder="Nova lozinka" [(ngModel)]="korisnik.lozinka"/>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Potvrdite lozinku</label>
+      <input type="password" class="form-control" placeholder="Potvrdite lozinku" [(ngModel)]="korisnik.lozinka"/>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Korisnicko ime</label>
+      <input class="form-control" placeholder="Korisnicko ime" [(ngModel)]="korisnik.korisnickoIme"/>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="snimi()">Spasi izmjene</button>
+      <button type="button" class="btn btn-outline-secondary" (click)="odbaci()">Odbaci izmjene</button>
+    </div>
+
+  </div>
+
+</div>
+
+
+

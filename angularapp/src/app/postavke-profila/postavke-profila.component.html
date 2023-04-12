@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="postavke">
+    <img style="border-radius: 30%" src="https://www.pngarts.com/files/10/Default-Profile-Picture-PNG-Free-Download.png" alt="Italian Trulli">
+    <br>
+    <h5><a  style="color: black" routerLink="/postavke-profila" ><b>Javni profil</b></a></h5>
+    <h5><a style="color: black" routerLink="/izmjena-lozinke" ><b>Postavke računa</b></a></h5>
+    <h5><a style="color: black" routerLink="" ><b>PRO račun</b></a></h5>
+    <h5><a style="color: black" routerLink="" ><b>Obavijesti</b></a></h5>
+  </div>
+
+  <div class="modal-body">
+    <h2>Postavke javnog profila</h2>
+    <br>
+
+    <div class="mb-3">
+      <label class="form-label">Ime</label>
+      <input class="form-control" placeholder="Ime" [(ngModel)]="korisnikInfo.ime">
+    </div>
+    <div class="mb-4">
+      <label class="form-label">Prezime</label>
+      <input class="form-control" placeholder="Prezime" [(ngModel)]="korisnikInfo.prezime"/>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input class="form-control" placeholder="Datum" [(ngModel)]="korisnikInfo.email"/>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Telefon</label>
+      <input class="form-control" placeholder="Imam" [(ngModel)]="korisnikInfo.telefon"/>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="snimi()">Spasi izmjene</button>
+      <button type="button" class="btn btn-outline-secondary" (click)="odbaci()">Odbaci izmjene</button>
+    </div>
+
+  </div>
+</div>

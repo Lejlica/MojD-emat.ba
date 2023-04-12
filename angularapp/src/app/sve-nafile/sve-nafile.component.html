@@ -1,0 +1,29 @@
+
+<main>
+  <div class="rectangle">
+    <p class="naslov">NAFILE</p>
+  </div>
+
+  <div class="sekcija" *ngFor="let x of nafilePodaci">
+    <div class="container">
+      <div class="slika">
+        <img src="{{getSlika(x.id)}}" class="img-fluid" alt="Responsive image">
+      </div>
+      <div class="info">
+        <h3 class="naziv" >{{x.naslov}}</h3>
+        <h5 class="datumi" >{{x.datumPocetka}} - {{x.datumZavrsetka}} </h5>
+        <ul class="nav flex-column">
+          <li>Trajanje: {{x.trajanje}} dana</li>
+          <li>...</li>
+        </ul>
+        <p class="opis">
+          {{x.opis}}
+        </p>
+        <button (click)="getDetaljiNafile(x)">Saznaj više</button>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+

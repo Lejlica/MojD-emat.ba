@@ -1,0 +1,49 @@
+<div class="rectangle">
+  <p class="naslov">POPIS STANOVNIKA</p>
+</div>
+<div class="filterDiv">
+  <input style="padding-left: 33px" class="filterImePrezime" placeholder="Ime ili prezime..." [(ngModel)]="filterPrezime">
+  <label class="clanIZ">Mekteb:</label>
+  <label class="switch1">
+    <input type="checkbox" (click)="filterMekteb=true" (dblclick)="filterMekteb=false">
+    <span class="slider round"></span>
+  </label>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Status
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" (click)="odaberiSvi()">Svi</a></li>
+      <li><a class="dropdown-item" (click)="odaberiUcenik()">{{ucenik}}</a></li>
+      <li><a class="dropdown-item" (click)="odaberiZaposlen()">{{zaposlen}}</a></li>
+      <li><a class="dropdown-item" (click)="odaberiNezaposlen()">{{nezaposlen}}</a></li>
+      <li><a class="dropdown-item" (click)="odaberiPenzioner()">{{penzioner}}</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="tabelaClanovi">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Ime</th>
+      <th>Prezime</th>
+      <th>Datum rođenja</th>
+      <th>Status</th>
+      <th>Mekteb</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let x of getpodaci()">
+      <td>{{x.ime}}</td>
+      <td>{{x.prezime}}</td>
+      <td>{{x.datumrodjenja}}</td>
+      <td>{{x.status}}</td>
+      <td><input type="checkbox" name="name1" *ngIf="x.mekteb==true" checked /></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
